@@ -14,7 +14,6 @@ import type { LinksFunction } from "remix";
 
 import deleteMeRemixStyles from "~/styles/demos/remix.css";
 import globalStylesUrl from "~/styles/global.css";
-import darkStylesUrl from "~/styles/dark.css";
 import Layout from "./components/admin/Layout";
 
 /**
@@ -28,11 +27,6 @@ import Layout from "./components/admin/Layout";
 export let links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: globalStylesUrl },
-    {
-      rel: "stylesheet",
-      href: darkStylesUrl,
-      media: "(prefers-color-scheme: dark)",
-    },
     { rel: "stylesheet", href: deleteMeRemixStyles },
   ];
 };

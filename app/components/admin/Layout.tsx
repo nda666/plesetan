@@ -10,7 +10,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
       <div className="h-full flex overflow-hidden bg-white pt-16">
         <Sidebar />
         <div className="h-full w-full flex flex-col bg-gray-50 relative overflow-y-auto lg:ml-64">
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow py-5 px-5">{children}</main>
           <Footer />
         </div>
       </div>

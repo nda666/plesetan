@@ -3,6 +3,9 @@
   "name": "remix-app-template",
   "description": "",
   "license": "",
+  "prisma": {
+    "seed": "node --require esbuild-register prisma/seed.ts"
+  },
   "scripts": {
     "build": "remix build",
     "dev": "remix watch",
@@ -17,9 +20,11 @@
     "@prisma/client": "^3.5.0",
     "@remix-run/express": "^1.0.5",
     "@remix-run/react": "^1.0.5",
+    "bcrypt": "^5.0.1",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
+    "faker": "^5.5.3",
     "morgan": "^1.10.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -27,10 +32,13 @@
   },
   "devDependencies": {
     "@remix-run/dev": "^1.0.5",
+    "@types/bcrypt": "^5.0.0",
+    "@types/faker": "^5.5.9",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
     "autoprefixer": "^10.4.0",
     "cypress": "^9.1.0",
+    "esbuild-register": "^3.2.0",
     "jest": "^27.3.1",
     "postcss": "^8.4.1",
     "postcss-cli": "^9.0.2",
