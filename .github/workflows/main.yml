@@ -17,7 +17,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          browser: firefox
+          browser: chrome
           record: true
         env:
           # pass the Dashboard record key as an environment variable
