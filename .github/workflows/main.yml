@@ -9,6 +9,7 @@ jobs:
   cypress-run:
     name: Cypress run
     runs-on: ubuntu-20.04
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,6 +17,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          browser: firefox
           record: true
         env:
           # pass the Dashboard record key as an environment variable
